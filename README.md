@@ -76,3 +76,76 @@ Stock movement records are used to track inbound and outbound inventory changes,
 git clone https://github.com/Agbak17/warehouse-management-backend.git
 cd warehouse-management-backend
 npm install
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+DATABASE_URL=your_postgresql_database_url
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+---
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## Prisma Commands
+
+Generate Prisma client:
+
+```bash
+npx prisma generate
+```
+
+Run migrations locally:
+
+```bash
+npx prisma migrate dev
+```
+
+Deploy migrations in production:
+
+```bash
+npx prisma migrate deploy
+```
+
+---
+
+## Challenges & Lessons Learned
+
+A key challenge in this project was designing inventory logic that accurately handles inbound and outbound stock movements while preventing invalid inventory states such as negative stock levels.
+
+The project also involved debugging real deployment issues, including database connectivity, Prisma migration behavior, environment configuration, and production hosting differences between local development and Render.
+
+Additional challenges included:
+
+- Managing relational warehouse data using Prisma and PostgreSQL
+- Designing batch-level inventory tracking
+- Securing protected API routes with JWT authentication
+- Handling environment variables safely across development and production environments
+- Resolving production database lifecycle and connection issues
+
+This project provided hands-on experience with backend architecture, relational database design, authentication, deployment workflows, and production debugging.
+
+---
+
+## Future Improvements
+
+- Role-based user permissions
+- Automated integration testing
+- Advanced warehouse analytics and reporting
+- Dockerized local development environment
+- Audit logs for stock movement history
+- Real-time inventory updates
+- Improved inventory forecasting and low-stock notifications
