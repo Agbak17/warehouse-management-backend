@@ -76,6 +76,7 @@ Stock movement records are used to track inbound and outbound inventory changes,
 git clone https://github.com/Agbak17/warehouse-management-backend.git
 cd warehouse-management-backend
 npm install
+```
 
 ---
 
@@ -94,7 +95,6 @@ PORT=5000
 ## Run Locally
 
 ```bash
-npm install
 npm run dev
 ```
 
